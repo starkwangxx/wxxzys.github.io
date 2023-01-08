@@ -122,7 +122,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       margin-top: -20px;
-      font-size: 46px;
+      font-size: 56px;
       color: #eea2a4;
     }
 
@@ -134,7 +134,7 @@
       width: 180px;
       height: 180px;
       color: #f1dadb;
-      padding: 20px;
+      padding: 40px;
       text-transform: lowercase;
     }
   </style>
@@ -188,7 +188,6 @@
       }
 
       function Heart() {
-var text=['sssss']
         this.x = Math.random() * ww;
         this.y = Math.random() * wh;
         this.opacity = Math.random() * 0.5 + 0.5;
@@ -218,7 +217,7 @@ var text=['sssss']
       };
       Heart.prototype.draw = function (i, text) {
         ctx.globalAlpha = this.opacity;
-        ctx.font = `${180 * this.scale}px "微软雅黑"`;
+        ctx.font = `${300 * this.scale}px "微软雅黑"`;
         // ctx.font="22px";
         ctx.fillStyle = colorss[i % 18];
         ctx.fillText(
@@ -603,10 +602,12 @@ var text=['sssss']
         "于我而言，你是最好且是唯一~❤️",
         "张憨憨宝贝，王星星永远爱你哟~❤️"
       ]
+     
       let str = text.join('<br><br>')
       let str_ = ''
       let i = 0
       let content = document.getElementById('contents')
+      content.font="20px";
       let timer = setInterval(() => {
         if (str_.length < str.length) {
           str_ += str[i++]
@@ -619,7 +620,7 @@ var text=['sssss']
     }
     setTimeout(() => {
       start();
-    }, 1);
+    }, 1000);
   </script>
 </body>
 
